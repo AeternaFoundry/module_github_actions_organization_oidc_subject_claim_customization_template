@@ -1,0 +1,6 @@
+resource "github_actions_organization_oidc_subject_claim_customization_template" "actions_organization_oidc_subject_claim_customization_templates" {
+  for_each = var.actions_organization_oidc_subject_claim_customization_templates
+
+  include_claim_keys = each.value.include_claim_keys
+}
+
